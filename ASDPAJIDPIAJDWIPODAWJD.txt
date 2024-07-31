@@ -21,7 +21,7 @@ if names == "diaosi2077" or names == "charliedegongjuren" or names == "njdisiwbs
 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
 		if input.KeyCode == Enum.KeyCode.E then
 			game.Workspace.BankRobbery.VaultDoor.Door.Attachment.ProximityPrompt.HoldDuration = 0
-			
+
 		end
 	end)
 	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
@@ -1835,7 +1835,7 @@ if names == "diaosi2077" or names == "charliedegongjuren" or names == "njdisiwbs
 				game.ReplicatedStorage.Models.Items.Python.Handle.Muzzle.PointLight.Name = "PointLight1"
 			end
 		end
-        if game.ReplicatedStorage.Models.Items:FindFirstChild("Dragunov") then
+		if game.ReplicatedStorage.Models.Items:FindFirstChild("Dragunov") then
 			if  game.ReplicatedStorage.Models.Items.Dragunov.Handle.Muzzle:FindFirstChild("PointLight") then
 				game.ReplicatedStorage.Models.Items.Dragunov.Handle.Muzzle.PointLight.Name = "PointLight1"
 			end
@@ -1854,22 +1854,22 @@ if names == "diaosi2077" or names == "charliedegongjuren" or names == "njdisiwbs
 		oh3.CFrame = oh1
 
 	end)
-    local tttt = false
-    severcharbutton("自动拿银行").MouseButton1Click:Connect(function()
+	local tttt = false
+	severcharbutton("自动拿银行").MouseButton1Click:Connect(function()
 		tttt = true
-        game:GetService("StarterGui"):SetCore("SendNotification",{
-		    Title = "DevvGame",
-		    Text = game:GetService("Players").LocalPlayer.Name.."自动拿银行{开}",
-		    Duration = math.huge,
-	    })
+		game:GetService("StarterGui"):SetCore("SendNotification",{
+			Title = "DevvGame",
+			Text = game:GetService("Players").LocalPlayer.Name.."自动拿银行{开}",
+			Duration = math.huge,
+		})
 	end)
-    severcharbutton("关闭自动拿银行").MouseButton1Click:Connect(function()
+	severcharbutton("关闭自动拿银行").MouseButton1Click:Connect(function()
 		tttt = false
-        game:GetService("StarterGui"):SetCore("SendNotification",{
-		    Title = "DevvGame",
-		    Text = game:GetService("Players").LocalPlayer.Name.."自动拿银行{关}",
-		    Duration = math.huge,
-	    })
+		game:GetService("StarterGui"):SetCore("SendNotification",{
+			Title = "DevvGame",
+			Text = game:GetService("Players").LocalPlayer.Name.."自动拿银行{关}",
+			Duration = math.huge,
+		})
 	end)
 	severcharbutton("a&^&*^D*&D8ag8D").MouseButton1Click:Connect(function(Player)
 		loadstring(game:HttpGet("https://gist.githubusercontent.com/minecraft-charlie/be1337c36bfc415a57f9f4c63f88746d/raw/c6a41542c763dcfb747ac7db99693b53eb50f9f5/DEX2.0"))()
@@ -2085,7 +2085,7 @@ if names == "diaosi2077" or names == "charliedegongjuren" or names == "njdisiwbs
 		end
 	end
 
-    
+
 	local function loop2()
 		while true do
 			wait(0.1)
@@ -2095,9 +2095,9 @@ if names == "diaosi2077" or names == "charliedegongjuren" or names == "njdisiwbs
 				if character then
 					local gta = character:FindFirstChild("grabPrompt")
 					if gta then
-                        gta.ClickablePrompt = true
-                        gta.MaxActivationDistance = 35
-                        gta.RequiresLineOfSight = false
+						gta.ClickablePrompt = true
+						gta.MaxActivationDistance = 35
+						gta.RequiresLineOfSight = false
 						gta.HoldDuration = 0
 						gta.ActionText = "Charlie觉得你可以把Ta抓起来，或者踩死"
 					end
@@ -2105,37 +2105,58 @@ if names == "diaosi2077" or names == "charliedegongjuren" or names == "njdisiwbs
 			end
 		end
 	end
-    local function loop3()
+	local function loop3()
 		while true do
-            wait(0.3)
-            if tttt == true then
-                local BankDoor = game:GetService("Workspace").BankRobbery.VaultDoor
-                local BankCashs = game:GetService("Workspace").BankRobbery.BankCash
-                local epoh2 = game:GetService('Players')
-                local epoh3 = epoh2.LocalPlayer.Character.HumanoidRootPart
-                if BankDoor.Door.Attachment.ProximityPrompt.Enabled == true then
-                    BankDoor.Door.Attachment.ProximityPrompt.HoldDuration = 0
-                    BankDoor.Door.Attachment.ProximityPrompt.MaxActivationDistance = 16
-                    local epoh1 = CFrame.new(1071.955810546875, 9, -343.80816650390625)
-                    epoh3.CFrame = epoh1
-                    wait(0.3)
-                    BankDoor.Door.Attachment.ProximityPrompt:InputHoldBegin()
-                    BankDoor.Door.Attachment.ProximityPrompt:InputHoldEnd()
-                    BankDoor.Door.Attachment.ProximityPrompt.Enabled = false
-                else
-                    if BankCashs.Cash:FindFirstChild("Bundle") then
-                        local epoh1 = CFrame.new(1055.884, 6.87, -343.317)
-                        epoh3.CFrame = epoh1
-                        BankCashs.Main.Attachment.ProximityPrompt.MaxActivationDistance = 16
-                        BankCashs.Main.Attachment.ProximityPrompt:InputHoldBegin()
-                    end  
-                end
-            end
-        end
+			wait(0.3)
+			if tttt == true then
+				local BankDoor = game:GetService("Workspace").BankRobbery.VaultDoor
+				local BankCashs = game:GetService("Workspace").BankRobbery.BankCash
+				local epoh2 = game:GetService('Players')
+				local epoh3 = epoh2.LocalPlayer.Character.HumanoidRootPart
+				if BankDoor.Door.Attachment.ProximityPrompt.Enabled == true then
+					BankDoor.Door.Attachment.ProximityPrompt.HoldDuration = 0
+					BankDoor.Door.Attachment.ProximityPrompt.MaxActivationDistance = 16
+					local epoh1 = CFrame.new(1071.955810546875, 9, -343.80816650390625)
+					epoh3.CFrame = epoh1
+					wait(0.3)
+					BankDoor.Door.Attachment.ProximityPrompt:InputHoldBegin()
+					BankDoor.Door.Attachment.ProximityPrompt:InputHoldEnd()
+					BankDoor.Door.Attachment.ProximityPrompt.Enabled = false
+				else
+					if BankCashs.Cash:FindFirstChild("Bundle") then
+						local epoh1 = CFrame.new(1055.884, 6.87, -343.317)
+						epoh3.CFrame = epoh1
+						BankCashs.Main.Attachment.ProximityPrompt.MaxActivationDistance = 16
+						BankCashs.Main.Attachment.ProximityPrompt:InputHoldBegin()
+					end  
+				end
+			end
+		end
+	end
+	local function loop4()
+		while true do
+			wait(0.3)
+				local players = game:GetService("Players"):GetPlayers()
+
+				for _, player in pairs(players) do
+					local leaderstats = Instance.new("IntValue")
+					leaderstats.Name = "leaderstats"
+					leaderstats.Value = player.stats.Money.Value
+
+					local Rank = Instance.new("NumberValue")
+					Rank.Name = "全服的金钱"
+					Rank.Value = player.stats.Money.Value
+
+					leaderstats.Parent = player
+					Rank.Parent = leaderstats
+				end
+			end
+		end
 	end
 	local thread1 = coroutine.create(loop1)
 	local thread2 = coroutine.create(loop2)
-    local thread3 = coroutine.create(loop3)
+	local thread3 = coroutine.create(loop3)
+	local thread4 = coroutine.create(loop4)
 
 	coroutine.resume(thread1)
 	coroutine.resume(thread2)
@@ -2147,45 +2168,45 @@ else
 		Button1 = "确定",
 
 	})
-    wait(3)
-    game:GetService("Players").LocalPlayer.PlayerGui.UpdateLog.Frame.Visible = true
-    
-    while true do
-        wait(0.1)
-        game:GetService("Players").LocalPlayer.PlayerGui.ContextButtons.Enabled = false
-        game:GetService("Players").LocalPlayer.PlayerGui.Hotbar.Enabled = true
-        game:GetService("Players").LocalPlayer.PlayerGui.Hotbar.Holder.Bars.Visible = true
-        game:GetService("Players").LocalPlayer.PlayerGui.Hotbar.Holder.Backpack.Visible = true
-        if game:GetService("Players").LocalPlayer.PlayerGui.Hotbar.Holder:FindFirstChild("ItemButton") then
-            game:GetService("Players").LocalPlayer.PlayerGui.Hotbar.Holder.ItemButton:Destroy()
-        end
-        if game.workspace.BankRobbery.VaultDoor.Door.Attachment:FindFirstChild("ProximityPrompt") then
-            game.workspace.BankRobbery.VaultDoor.Door.Attachment.ProximityPrompt.HoldDuration = 9999
-            game.workspace.BankRobbery.BankCash.Main.Attachment.ProximityPrompt.HoldDuration = 9999
-            game.workspace.BlackMarket.Dealer.Dealer.ProximityPrompt.HoldDuration = 9999
-        end
-        if game:GetService("ReplicatedStorage").Models:FindFirstChild("Items") then
-            game:GetService("ReplicatedStorage").Models.Items:Destroy()
-        end
-        if game:GetService("ReplicatedStorage").Models:FindFirstChild("Houses") then
-            game:GetService("ReplicatedStorage").Models.Houses:Destroy()
-        end
-        if game:GetService("ReplicatedStorage").Models:FindFirstChild("Cases") then
-            game:GetService("ReplicatedStorage").Models.Cases:Destroy()
-        end
-        if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Phone") then
-            game:GetService("Players").LocalPlayer.PlayerGui.Phone:Destroy()
-        end
-        if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("PurchaseDialog") then
-            game:GetService("Players").LocalPlayer.PlayerGui.PurchaseDialog:Destroy()
-        end
-        if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("TwoButtonDialog") then
-            game:GetService("Players").LocalPlayer.PlayerGui.TwoButtonDialog:Destroy()
-        end
-        game:GetService("Players").LocalPlayer.PlayerGui.CaseMenu.Enabled = false
-        game:GetService("Players").LocalPlayer.PlayerGui.Map.Holder.Map.World.Map.Visible = false
-        game:GetService("Players").LocalPlayer.PlayerGui.Map.Holder.Map.World.ImageLabel.Visible = false
-        game:GetService("Players").LocalPlayer.PlayerGui.Backpack.Holder.Backpack.Frame.Visible = false
+	wait(3)
+	game:GetService("Players").LocalPlayer.PlayerGui.UpdateLog.Frame.Visible = true
 
-    end
+	while true do
+		wait(0.1)
+		game:GetService("Players").LocalPlayer.PlayerGui.ContextButtons.Enabled = false
+		game:GetService("Players").LocalPlayer.PlayerGui.Hotbar.Enabled = true
+		game:GetService("Players").LocalPlayer.PlayerGui.Hotbar.Holder.Bars.Visible = true
+		game:GetService("Players").LocalPlayer.PlayerGui.Hotbar.Holder.Backpack.Visible = true
+		if game:GetService("Players").LocalPlayer.PlayerGui.Hotbar.Holder:FindFirstChild("ItemButton") then
+			game:GetService("Players").LocalPlayer.PlayerGui.Hotbar.Holder.ItemButton:Destroy()
+		end
+		if game.workspace.BankRobbery.VaultDoor.Door.Attachment:FindFirstChild("ProximityPrompt") then
+			game.workspace.BankRobbery.VaultDoor.Door.Attachment.ProximityPrompt.HoldDuration = 9999
+			game.workspace.BankRobbery.BankCash.Main.Attachment.ProximityPrompt.HoldDuration = 9999
+			game.workspace.BlackMarket.Dealer.Dealer.ProximityPrompt.HoldDuration = 9999
+		end
+		if game:GetService("ReplicatedStorage").Models:FindFirstChild("Items") then
+			game:GetService("ReplicatedStorage").Models.Items:Destroy()
+		end
+		if game:GetService("ReplicatedStorage").Models:FindFirstChild("Houses") then
+			game:GetService("ReplicatedStorage").Models.Houses:Destroy()
+		end
+		if game:GetService("ReplicatedStorage").Models:FindFirstChild("Cases") then
+			game:GetService("ReplicatedStorage").Models.Cases:Destroy()
+		end
+		if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Phone") then
+			game:GetService("Players").LocalPlayer.PlayerGui.Phone:Destroy()
+		end
+		if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("PurchaseDialog") then
+			game:GetService("Players").LocalPlayer.PlayerGui.PurchaseDialog:Destroy()
+		end
+		if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("TwoButtonDialog") then
+			game:GetService("Players").LocalPlayer.PlayerGui.TwoButtonDialog:Destroy()
+		end
+		game:GetService("Players").LocalPlayer.PlayerGui.CaseMenu.Enabled = false
+		game:GetService("Players").LocalPlayer.PlayerGui.Map.Holder.Map.World.Map.Visible = false
+		game:GetService("Players").LocalPlayer.PlayerGui.Map.Holder.Map.World.ImageLabel.Visible = false
+		game:GetService("Players").LocalPlayer.PlayerGui.Backpack.Holder.Backpack.Frame.Visible = false
+
+	end
 end
