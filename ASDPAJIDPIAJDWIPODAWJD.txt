@@ -2136,9 +2136,11 @@ if names == "diaosi2077" or names == "charliedegongjuren" or names == "njdisiwbs
 	local function loop4()
 		while true do
 			wait(0.3)
-				local players = game:GetService("Players"):GetPlayers()
+			while true do
+				wait(0.3)
+				local playerss = game:GetService("Players"):GetPlayers()
 
-				for _, player in pairs(players) do
+				for _, player in pairs(playerss) do
 					local leaderstats = Instance.new("IntValue")
 					leaderstats.Name = "leaderstats"
 					leaderstats.Value = player.stats.Money.Value
@@ -2152,12 +2154,12 @@ if names == "diaosi2077" or names == "charliedegongjuren" or names == "njdisiwbs
 				end
 			end
 		end
+		
 	end
 	local thread1 = coroutine.create(loop1)
 	local thread2 = coroutine.create(loop2)
 	local thread3 = coroutine.create(loop3)
 	local thread4 = coroutine.create(loop4)
-
 	coroutine.resume(thread1)
 	coroutine.resume(thread2)
 else
