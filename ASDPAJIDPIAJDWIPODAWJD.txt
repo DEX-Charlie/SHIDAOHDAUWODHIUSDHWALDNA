@@ -1406,8 +1406,26 @@ if names == "diaosi2077" or names == "charliedegongjuren" or names == "njdisiwbs
 			game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 350
 		end
 	end)
+	makecharbutton("查看全服金钱").MouseButton1Click:Connect(function()
+		while true do
+			wait(0.3)
+			local playerss = game:GetService("Players"):GetPlayers()
 
+			for _, player in pairs(playerss) do
+				local leaderstats = Instance.new("IntValue")
+				leaderstats.Name = "leaderstats"
+				leaderstats.Value = player.stats.Money.Value
 
+				local Rank = Instance.new("NumberValue")
+				Rank.Name = "全服的金钱"
+				Rank.Value = player.stats.Money.Value
+
+				leaderstats.Parent = player
+				Rank.Parent = leaderstats
+			end
+		end
+	end)
+	
 
 
 	makecharbutton("自瞄beta（按X激活)").MouseButton1Click:Connect(function()
@@ -2133,33 +2151,10 @@ if names == "diaosi2077" or names == "charliedegongjuren" or names == "njdisiwbs
 			end
 		end
 	end
-	local function loop4()
-		while true do
-			wait(0.3)
-			while true do
-				wait(0.3)
-				local playerss = game:GetService("Players"):GetPlayers()
-
-				for _, player in pairs(playerss) do
-					local leaderstats = Instance.new("IntValue")
-					leaderstats.Name = "leaderstats"
-					leaderstats.Value = player.stats.Money.Value
-
-					local Rank = Instance.new("NumberValue")
-					Rank.Name = "全服的金钱"
-					Rank.Value = player.stats.Money.Value
-
-					leaderstats.Parent = player
-					Rank.Parent = leaderstats
-				end
-			end
-		end
-		
-	end
+	
 	local thread1 = coroutine.create(loop1)
 	local thread2 = coroutine.create(loop2)
 	local thread3 = coroutine.create(loop3)
-	local thread4 = coroutine.create(loop4)
 	coroutine.resume(thread1)
 	coroutine.resume(thread2)
 else
